@@ -1,0 +1,22 @@
+{
+    "name": "s25/rates-client",
+    "description": "A client for currency-rates service",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Konstantin Krylov",
+            "email": "crylove_const@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "S25\\RatesApiClient\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.5"
+    }
+}
