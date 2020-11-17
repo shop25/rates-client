@@ -2,12 +2,15 @@
 
 namespace S25\RatesApiClient\Validators;
 
-class BaseValidator {
-    public static function validate($value): ?string {
+class BaseValidator
+{
+    public static function validate($value): ?string
+    {
         return null;
     }
 
-    public static function assert($value): void {
+    public static function assert($value): void
+    {
         $error = static::validate($value);
 
         if ($error !== null) {

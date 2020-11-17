@@ -34,6 +34,11 @@ class Client implements Contracts\Client
         };
     }
 
+    public function requestCurrencies(): Contracts\Request\CurrenciesRequest
+    {
+        return new Request\CurrenciesRequest($this->performCallback);
+    }
+
     public function requestRates(): Contracts\Request\RatesRequest
     {
         return new Request\RatesRequest($this->performCallback);
