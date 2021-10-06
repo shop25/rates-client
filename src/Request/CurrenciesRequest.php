@@ -18,6 +18,12 @@ class CurrenciesRequest extends BaseRequest implements CurrenciesRequestContract
             throw new \RuntimeException("Result is not an array");
         }
 
-        return array_map(static fn($data) => new Currency($data[0], $data[1], $data[2], $data[3], $data[4]), $data);
+        return array_map(static fn($data) => new Currency(
+            $data[0], // code
+            $data[1], // name
+            $data[2], // sign
+            $data[3], // decimals
+            $data[4] // multiplier
+        ), $data);
     }
 }
